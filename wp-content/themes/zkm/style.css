@@ -1,0 +1,60 @@
+/*
+Theme Name: ZKMサイトテーマ
+Author: ZKM 
+Author URI: http://www.zkm.jp/
+Description: ZKM 全国健称マラソン会HP用テーマ
+Version: 1.0
+*/
+
+.wp-pagenavi {
+	margin: 30px auto;
+	text-align: center;
+	font-size: 90%;
+}
+
+.wp-pagenavi a, .wp-pagenavi span {
+	border: none;
+}
+
+.wp-pagenavi .current {
+	border: none;
+	background-color: #2ba6cb;
+	color: #fff;
+	margin: 0 5px;
+}
+
+#sidebar h2 {
+	font-size: 100%;
+}
+
+#sidebar ul {
+	margin: 0;
+}
+
+#sidebar .widget {
+	list-style: none;
+}
+
+#sidebar .widget li {
+	list-style: none;
+	margin-bottom: 0.5em;
+	font-size: 80%
+}
+
+.footer1 h2 {
+	font-size: 100%;
+}
+
+.footer1 ul {
+	margin: 0;
+}
+
+.footer1 .widget {
+	list-style: none;
+}
+
+.footer1 .widget li {
+	list-style: none;
+	margin-bottom: 0.5em;
+	font-size: 80%
+}

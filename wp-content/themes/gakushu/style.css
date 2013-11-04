@@ -1,0 +1,597 @@
+@charset "UTF-8";
+/*
+このファイルは、テーマのスタイルシートを調整するのと同時に、WordPressのテーマ管理画面に表示される各情報を定義しています。
+
+以下に記載されている「キー: 値」の組み合わせで、定義されます。各キーの意味は次の通りです。
+
+・Theme Name / Theme URI
+テーマ名及び、配布元サイトのURL
+
+・Author / Author URI
+作成者及び、作成者のURL
+
+・Version
+バージョン番号
+
+・Description
+テーマの説明文。1行で記載します
+
+・Tags
+そのテーマのタグ。WordPressのテーマディレクトリーなどで検索のキーになります。
+（例： black, blue, two-columns）
+
+・License / License URI
+採用するライセンスと、ライセンス文へのURL
+
+詳細は、次のドキュメントなどを参照してください。
+http://wpdocs.sourceforge.jp/テーマの作成
+
+--- 以下実際の定義 ---
+
+Theme Name: ともすた学習用テーマ
+Theme URI: http://wpgakushu.tomosta.jp
+Author: H2O SPACE / anygraphica
+Author URI: http://tomosta.jp
+Version: 1.0
+Tags: black, white, two-columns, right-sidebar, fixed-width, custom-menu
+Description: このテーマは、WordPressのテーマカスタマイズ・制作の学習用のテーマファイルです。この記述やテーマ名の記述は、以下のファイルに記載されています。/wp-content/themes/gakushu/style.css
+License: MIT License
+License URI: http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license
+*/
+
+@import url('editor-style.css');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 注釈をなくしたい場合は、以下の「display: none」のコメントを外します */
+.caution {
+	color: #f00 !important;
+	margin: 0 0 0 20px !important;
+/*
+	display: none;
+*/
+}
+
+
+/* ================================================== *
+ *
+ *    基本設定
+ *
+ * ================================================== */
+
+/* ------------------------------------------------- *
+ *        body背景、基本文字サイズ
+ * ------------------------------------------------- */
+body {
+	font-size: 81.3%; /* 13px相当 */
+	color: #333; /* 基本文字色 */
+}
+
+/* ------------------------------------------------- *
+ *        リンク用スタイル
+ * ------------------------------------------------- */
+a:visited ,
+a:link {
+	color: #333;
+	text-decoration: none;
+}
+a:active ,
+a:hover {
+	text-decoration: underline;
+}
+
+/* ================================================== *
+ *
+ *    個別ページナビゲーション
+ *
+ * ================================================== */
+#globalNav {
+	height: 50px;
+	background: #333;
+}
+#globalNav .globalNavInner {
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+}
+
+/* ------------------------------------------------- *
+ *        メニュー
+ * ------------------------------------------------- */
+#globalNav ul {
+	overflow: hidden;
+}
+#globalNav li {
+	float: left;
+	line-height: 50px;
+}
+#globalNav a {
+	text-align: center;
+	padding: 5px 20px;
+	color: #ccc;
+	border-right: 1px solid #555;
+}
+#globalNav li:first-child a {
+	border-left: 1px solid #555;
+}
+
+/* ================================================== *
+ *
+ *    ヘッダー用スタイル
+ *
+ * ================================================== */
+#header {
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+	padding: 140px 0px;
+}
+
+#second #header {
+	padding: 20px 0px;
+}
+
+/* ------------------------------------------------- *
+ *        ページタイトル
+ * ------------------------------------------------- */
+#home #header h1 {
+	font-size: 780%;
+	line-height: 1;
+	font-family: Verdana;
+	font-weight: normal;
+	letter-spacing: -0.07em;
+}
+#home #header h1 span {
+	color: #999;
+	padding-left: 30px;
+}
+#home #header h1 a:hover {
+	text-decoration: none;
+	color: #999;
+}
+#home #header p {
+	text-align: center;
+	margin: 40px 0 20px 20px;
+}
+
+#second #header h1 {
+	font-size: 120%;
+}
+
+#siteid {
+	font-size: 300%;
+	font-weight: bold;
+}
+
+/* ------------------------------------------------- *
+ *        キャプション
+ * ------------------------------------------------- */
+.caution {
+	color: #666;
+	font-size: 76.9%;
+	margin-top: 15px;
+}
+
+/* ================================================== *
+ *
+ *    フッター用スタイル
+ *
+ * ================================================== */
+#footer {
+	overflow: hidden;
+	background: #000;
+	color: #fff;
+}
+#footerInner {
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+	padding: 40px 0 40px;
+}
+
+/* ------------------------------------------------- *
+ *        タイトル
+ * ------------------------------------------------- */
+#footer h2 {
+	font-size: 184.6%;
+	font-family: Verdana;
+	font-weight: normal;
+}
+#footer h2 span {
+	display: block;
+	font-size: 50%;
+	color: #444;
+}
+
+/* ------------------------------------------------- *
+ *        リンク
+ * ------------------------------------------------- */
+#footer a {
+	padding: 3px 5px;
+	color: #999;
+	display: block;
+}
+#footer a:hover {
+	background: #FF0;
+	color: #333;
+	text-decoration: none;
+}
+
+/* ------------------------------------------------- *
+ *        リスト
+ * ------------------------------------------------- */
+#footer ul {
+	margin: 20px 0 0 15px;
+}
+#footer li li {
+	color: #666;
+	margin-top: 3px;
+	list-style-type: square;
+}
+
+/* ------------------------------------------------- *
+ *        最近の投稿
+ * ------------------------------------------------- */
+#footer .footer1 {
+	width: 400px;
+	float: left;
+	border-right: 1px solid #222;
+	padding-right: 70px;
+	margin-right: -1px;
+}
+
+/* ------------------------------------------------- *
+ *        最近の投稿
+ * ------------------------------------------------- */
+#footer .footer2 {
+	width: 400px;
+	float: right;
+	padding-left: 69px;
+	border-left: 1px solid #222;
+}
+
+/* ------------------------------------------------- *
+ *        コピーライト
+ * ------------------------------------------------- */
+#footer small {
+	clear: both;
+	display: block;
+	color: #666;
+	padding-top: 80px;
+}
+
+/* ================================================== *
+ *
+ *    コンテンツ部分レイアウト用スタイル
+ *
+ * ================================================== */
+#wrapper {
+	width: 940px;
+	margin: 0 auto 140px;
+}
+#main {
+	width: 560px;
+	float: left;
+}
+#side {
+	width: 240px;
+	float: right;
+}
+
+/* ================================================== *
+ *
+ *    サイドエリア部分スタイル
+ *
+ * ================================================== */
+
+/* ------------------------------------------------- *
+ *        タイトル
+ * ------------------------------------------------- */
+#side h2 {
+	font-size: 130.8%;
+	margin-top: 50px;
+}
+#side li:first-child h2 {
+	margin-top: 0;
+}
+#side h2 span {
+	display: block;
+	font-size: 50%;
+	color: #999;
+	font-weight: normal;
+}
+
+/* ------------------------------------------------- *
+ *        リンク
+ * ------------------------------------------------- */
+#side a,
+#postnav a,
+#article-meta a {
+	background: #222;
+	color: #fff;
+	display: inline-block;
+	padding: 3px 7px;
+}
+#side a:hover,
+#postnav a:hover,
+#article-meta a:hover {
+	color: #222;
+	background: #FF0;
+	text-decoration: none;
+}
+
+/* ------------------------------------------------- *
+ *        リスト
+ * ------------------------------------------------- */
+#side ul {
+	margin-top: 10px;
+}
+
+/* ------------------------------------------------- *
+ *        検索
+ * ------------------------------------------------- */
+#s {
+	width: 160px;
+	float: left;
+	background: #aaa;
+	border: none;
+	height: 30px;
+	padding: 0 5px;
+	border-radius: 5px 0 0 5px;
+	-webkit-border-top-left-radius: 5px 0 0 5px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#efefef),
+		to(#eee)
+	);
+	box-shadow: 1px 1px 3px #aaa inset;
+	-webkit-box-shadow: 1px 1px 3px #aaa inset;
+}
+#searchsubmit {
+	width: 70px;
+	display: block;
+	border: none;
+	background: #000;
+	color: #fff;
+	padding: 0;
+	height: 30px;
+	border-radius: 0 5px 5px 0;
+	-webkit-border-top-left-radius: 0 5px 5px 0;
+}
+.screen-reader-text {
+	display: none;
+}
+
+/* ------------------------------------------------- *
+ *        カレンダー
+ * ------------------------------------------------- */
+#calendar_wrap caption {
+	font-size: 84.6%;
+	padding-bottom: 10px;
+}
+#calendar_wrap table {
+	width: 100%;
+}
+#calendar_wrap td ,
+#calendar_wrap th {
+	width: 14.2%;
+	text-align: center;
+	padding: 3px;
+	font-weight: normal;
+}
+#calendar_wrap table a {
+	display: block;
+	padding: 3px;
+}
+
+/* ------------------------------------------------- *
+ *        widget_nav_menu
+ * ------------------------------------------------- */
+#side .widget_nav_menu {
+	margin-top: 50px;
+	border-bottom: 1px solid #ccc;
+}
+#side .widget_nav_menu ul {
+	margin: 0;
+}
+#side .widget_nav_menu ul a {
+	display: block;
+	color: #333;
+	font-weight: bold;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background: none;
+	padding: 7px;
+}
+#side .widget_nav_menu ul a:hover {
+	background: #fafafa;
+}
+#side .widget_nav_menu ul a:before {
+	content: "■";
+}
+#side .widget_nav_menu ul ul li {
+	margin-bottom: -1px;
+}
+#side .widget_nav_menu ul ul a {
+	font-weight: normal;
+	border-top: 1px dotted #ccc;
+	border-bottom: 1px dotted #ccc;
+}
+#side .widget_nav_menu ul ul a:before {
+	display: none;
+}
+#side .widget_nav_menu ul ul li:first-child a {
+	border-top-style: none;
+}
+#side .widget_nav_menu ul ul ul li {
+	list-style-type: circle;
+	list-style-position: inside;
+	margin: 8px 0 8px 15px;
+}
+#side .widget_nav_menu ul ul ul a {
+	display: inline;
+	border: none;
+	padding: 0;
+}
+#side .widget_nav_menu ul ul ul a:hover {
+	text-decoration: underline;
+}
+
+/* ================================================== *
+ *
+ *    記事一覧部分スタイル
+ *
+ * ================================================== */
+#main article {
+	margin-top: 2em;
+}
+#main article:first-child {
+	margin-top: 0;
+}
+
+/* ------------------------------------------------- *
+ *        タイトル
+ * ------------------------------------------------- */
+#main h1 {
+	position: relative;
+	font-size: 150%;
+}
+#main article h1:before {
+	position: absolute;
+	top: 10px;
+	left: -25px;
+	display: block;
+	margin-top: 0;
+	width: 15px;
+	height: 1px;
+	background: #333;
+	content: "";
+}
+#main article .date {
+	margin-top: 5px;
+	color: #666;
+	font-size: 76.9%;
+}
+
+/* ------------------------------------------------- *
+ *        記事本文
+ * ------------------------------------------------- */
+#main aside {
+	margin-bottom: 40px;
+	font-size: 80%;
+}
+#main aside:after {
+	clear: both;
+}
+#main aside dt {
+	display: inline;
+	margin-right: 5px;
+}
+#main aside dd {
+	display: inline;
+	margin-right: 20px;
+	padding: 3px;
+}
+#main aside dd ul,
+#main aside dd li {
+	display: inline;
+}
+
+/* コメント */
+.comments-area label {
+	display: block;
+	width: 10em;
+	float: left;
+}
+.comments-area {
+	clear: both;
+}
+.comments-area p {
+	margin-bottom: 1em;
+}
+.comments-area .comment-subscription-form {
+	float: left;
+	margin-right: 10px;
+}
+.comment-body {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+}
+.comment-body .comment-meta {
+	font-size: 80%;
+	margin-left: 32px;
+	margin-bottom: 0.5em;
+}
+.comment-body .comment-meta a {
+	color: #222;
+	text-decoration: none;
+}
+.comment-body p {
+	margin-bottom: 0.5em;
+}
+
+/* ナビ */
+#pagenav {
+	width: 200px;
+	margin: 0 auto;
+}
+
+#pagenav .prev {
+	float: left;
+}
+
+#pagenav .next {
+	float: right;
+}
+
+#postnav {
+	text-align: center;
+	margin: 3em auto;
+}
+
+#postnav .nav-page {
+	margin-bottom: 0.5em;
+}
+
+.wp-caption {
+	font-size: 80%;
+}
+.wp-caption-text {
+	font-size: 100%;
+}
+.sticky {
+	background-color: #fcc;
+}
+.gallery-caption {
+	font-size: 100%;
+}
+.bypostauthor {
+	font-size: 100%;
+}
