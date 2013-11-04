@@ -40,3 +40,21 @@ Version: 1.0
 	margin-bottom: 0.5em;
 	font-size: 80%
 }
+
+.footer1 h2 {
+	font-size: 100%;
+}
+
+.footer1 ul {
+	margin: 0;
+}
+
+.footer1 .widget {
+	list-style: none;
+}
+
+.footer1 .widget li {
+	list-style: none;
+	margin-bottom: 0.5em;
+	font-size: 80%
+}
