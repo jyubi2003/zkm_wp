@@ -13,11 +13,8 @@
 
 	<link rel="stylesheet" href="/wp/_shared/css/foundation.css" />
 	<script src="/wp/_shared/js/vendor/custom.modernizr.js"></script>
-
+	<link rel="stylesheet" href="/wp/_shared/css/style.css" />
 <?php wp_head(); ?>
-
-<link rel="stylesheet" href="/wp/_shared/css/style.css" />
-
 </head>
 <body id="<?php echo ( is_front_page() ? 'top' : 'second' ); ?>">
 

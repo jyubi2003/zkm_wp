@@ -3,10 +3,9 @@
 	<div id="footerInner">
 		<div class="large-12 columns">
 			<hr />
-		</div>
-
-		<div class="footer1">
-			<?php dynamic_sidebar('footer1'); ?>
+			<div class="footer1">
+				<?php dynamic_sidebar('footer1'); ?>
+			</div>
 		</div>
 
 		<small>&copy; <?php bloginfo('name'); ?></small>
@@ -22,6 +21,6 @@ document.write('<script src=' +
 <script>
 $(document).foundation();
 </script>
-
+<?php wp_footer(); ?>
 </body>
 </html>

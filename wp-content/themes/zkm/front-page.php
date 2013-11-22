@@ -23,7 +23,7 @@
       <?php $news = get_posts( 'posts_per_page=5' ); ?>
       <?php foreach($news as $post): ?>
       <?php setup_postdata($post); ?>
-      <a href="%3C?php%20the_permalink%28%29;%20?%3E">
+      <a href="<?php the_permalink(); ?>">
       <div class="alert-box">
         <p><?php the_title(); ?> -<?php the_date(); ?> </p>
       </div>
